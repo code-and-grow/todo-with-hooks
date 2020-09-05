@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from './components/Todo';
+import TodoForm from './components/TodoForm';
 import './App.css';
 
 function App() {
@@ -26,7 +27,11 @@ function App() {
               />
             )
           })
-        } 
+        }
+        <TodoForm
+          todos={ todos }
+          setTodos={ setTodos }
+        />
       </main>
     </div>
   );

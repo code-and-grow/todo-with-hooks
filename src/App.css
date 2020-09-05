@@ -6,7 +6,7 @@
 }
 
 .app-header {
-  background: #05609c;
+  background: #0676c0;
   color: #ffffff;
   text-align: center;
   padding: 10px;
@@ -23,11 +23,23 @@
 .todo {
   background: #fff;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  padding: 3px 10px;
-  font-size: 12px;
-  margin-bottom: 6px;
+  padding: 11px 15px 10px;
+  font-size: 1rem;
+  margin: 0.5em;
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.todo-form {
+  padding: 11px 11px 10px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 3px solid #777777;
+  border-radius: 8px;
 }
