@@ -30,7 +30,7 @@ export default function TodoForm(props) {
         type="text"
         value={ value }
         onChange={ handleChange }
-        placeholder="Type in new todo and press 'Enter' to save"
+        placeholder="Type in a new todo and press 'Enter' to save"
       />
     </form>
   );
