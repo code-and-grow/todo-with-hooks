@@ -4,7 +4,13 @@ export default function Todo(props) {
 
   const completeTodo = (index, todos) => {
     const todosUpdated = [ ...todos ];
-    todosUpdated[index].completed = true;
+    todosUpdated[index].completed = !todosUpdated[index].completed;
+    props.setTodos(todosUpdated);
+  };
+
+  const removeTodo = (index, todos) => {
+    const todosUpdated = [ ...todos ];
+    todosUpdated.splice(index, 1);
     props.setTodos(todosUpdated);
   };
 
@@ -19,7 +25,10 @@ export default function Todo(props) {
     >
       { (props.index + 1) + '. ' + props.todo.text }
       <div>
-        <button onClick={() => completeTodo(props.index, props.todos)}>Done</button>
+        <button onClick={() => completeTodo(props.index, props.todos)}>
+          { props.todo.completed ? 'Undo' : 'Mark done' }
+        </button>
+        <button className="delete" onClick={() => removeTodo(props.index, props.todos)}>X</button>
       </div>
     </div>
   );
