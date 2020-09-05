@@ -15,16 +15,17 @@ export default function Todo(props) {
   };
 
   return(
-    <div 
-      className="todo" 
+    <div className="todo" 
       style={{ 
         textDecoration: props.todo.completed ? "line-through" : "",
         background: props.todo.completed ? "#e8e8e8" : "",
         boxShadow: "none"
       }}
     >
-      { (props.index + 1) + '. ' + props.todo.text }
-      <div>
+      <div className="todo-text">
+        { (props.index + 1) + '. ' + props.todo.text }
+      </div>
+      <div className="todo-btns">
         <button onClick={() => completeTodo(props.index, props.todos)}>
           { props.todo.completed ? 'Undo' : 'Mark done' }
         </button>

@@ -36,6 +36,14 @@ html {
   justify-content: space-between;
 }
 
+.todo-text, .todo-btns {
+  width: 50%;
+}
+
+.todo-btns {
+  text-align: right;
+}
+
 .todo button {
   background: rgb(55, 175, 7);
   border-radius: 4px;
