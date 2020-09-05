@@ -1,7 +1,15 @@
 .app {
   background: #209cee;
-  padding: 30px;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header {
+  background: #05609c;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
 }
 
 .todo-list {
@@ -9,6 +17,7 @@
   border-radius: 4px;
   padding: 5px;
   max-width: 400px;
+  margin: 30px auto;
 }
 
 .todo {
