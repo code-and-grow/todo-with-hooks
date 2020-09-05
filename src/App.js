@@ -6,32 +6,45 @@ import './App.css';
 function App() {
 
   const [todos, setTodos] = React.useState([
-    { text: "Learn React hooks" },
-    { text: "Build a todo app" },
-    { text: "Have some Crystal" },
+    { 
+      text: "Learn React hooks",
+      completed: false
+    },
+    { 
+      text: "Build a todo app",
+      completed: false 
+    },
+    { 
+      text: "Have some Crystal",
+      completed: false 
+    },
   ]);
 
   return (
     <div className="app">
       <header className="app-header">
-        <h1>(: To Do || Not To Do :)</h1>
+        <h1>To Do <em><small>or</small></em> Not To Do</h1>
       </header>
-      <main className="todo-list">
-        {todos && 
-          todos.map((todo, i) => {
-            return(
-              <Todo 
-                key={ i } 
-                index={ i } 
-                text={ todo.text }
-              />
-            )
-          })
-        }
-        <TodoForm
-          todos={ todos }
-          setTodos={ setTodos }
-        />
+      <main>
+        <div className="todo-list">
+          {todos && 
+            todos.map((todo, i) => {
+              return(
+                <Todo 
+                  key={ i } 
+                  index={ i } 
+                  todos={ todos }
+                  todo={ todo }
+                  setTodos={ setTodos }
+                />
+              )
+            })
+          }
+          <TodoForm
+            todos={ todos }
+            setTodos={ setTodos }
+          />
+        </div>
       </main>
     </div>
   );
